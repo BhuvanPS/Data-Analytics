@@ -1,127 +1,60 @@
-# 🎯 Game Theory Solver (Pure & Mixed Strategies) in R using lpSolveAPI
+# 📊 Data Analytics
 
-This R project provides a general solver for two-player **zero-sum games** using a **payoff matrix**. It supports both **pure strategies** (when a saddle point exists) and **mixed strategies** (using Linear Programming via `lpSolveAPI`).
-
----
-
-## 📦 Requirements
-
-- R (version ≥ 3.6)
-- R package: `lpSolveAPI`
-
-Install the required package in R:
-
-```r
-install.packages("lpSolveAPI")
-```
+This folder contains code, notebooks, datasets, and documentation related to **Data Analytics** projects and experiments. It is designed to provide a structured approach to data-driven decision making using exploratory analysis, statistical methods, and visualization techniques.
 
 ---
 
-## 🧠 Features
+## 📦 Contents
 
-- ✅ Detects **Pure Strategy** equilibrium (saddle point)
-- 🔁 Solves **Mixed Strategy** using Linear Programming (LP)
-- Computes:
-  - Optimal strategy for Player A and Player B
-  - Game value (expected payoff)
-  - Strategy probabilities
-
----
-
-## 🚀 How to Use
-
-### 1. Clone or copy the script
-
-Download or clone the repository, then load the script in your R environment.
-
-### 2. Define your payoff matrix
-
-The matrix must represent **Player A’s payoffs**:
-
-```r
-payoff_matrix <- matrix(c(4, 2,
-                          3, 1), nrow = 2, byrow = TRUE)
-```
-
-### 3. Run the solver
-
-Use the following function to find the optimal strategy (pure or mixed):
-
-```r
-result <- find_optimal_strategy_oneshot(payoff_matrix)
-```
-
-### 4. View results
-
-```r
-result$type               # "Pure Strategy" or "Mixed Strategy"
-result$playerA_strategy   # Strategy probabilities for Player A
-result$playerB_strategy   # Strategy probabilities for Player B
-result$game_value         # Expected payoff (game value)
-```
+- `datasets/` – Sample datasets used for analysis
+- `scripts/` – Data processing and analysis scripts (R, Python, etc.)
+- `notebooks/` – Jupyter or R Markdown notebooks with detailed analysis
+- `reports/` – Visual summaries and project reports
+- `README.md` – Documentation and setup instructions
 
 ---
 
-## 🧪 Example
+## 🧠 Objectives
 
-```r
-payoff_matrix <- matrix(c(4, 2,
-                          3, 1), nrow = 2, byrow = TRUE)
-```
-
-**Output:**
-
-```
-=== Game Type ===
- Pure Strategy 
-
-=== Player A Strategy ===
-[1] 0 1
-
-=== Player B Strategy ===
-[1] 0 1
-
-=== Game Value ===
-[1] 1
-```
+- Perform **Exploratory Data Analysis (EDA)**
+- Clean and preprocess raw data
+- Apply **statistical** and **machine learning** techniques
+- Visualize insights using tools like ggplot2, matplotlib, seaborn, etc.
+- Derive actionable business insights
 
 ---
 
-## 📚 How It Works
+## 🚀 Getting Started
 
-- **Pure Strategy Detection**:
-  - Checks for saddle point: `max(row mins) == min(col maxes)`
-- **Mixed Strategy Solver**:
-  - LP formulation:
-    - Player A: maximize `v` such that Aᵗx ≥ v and ∑x = 1
-    - Player B: minimize `v` such that Ay ≤ v and ∑y = 1
-
-Implemented using the `lpSolveAPI` R package for building and solving LP problems.
+1. Clone or download the repository.
+2. Install required packages (in R or Python).
+3. Explore and run code inside `notebooks/` or `scripts/`.
+4. Analyze datasets in `datasets/`.
 
 ---
 
-## 📁 Files
+## 💡 Tools & Technologies
 
-- `game_theory_solver.R` – Main script
-- `README.md` – Documentation file
-
----
-
-## 📌 Notes
-
-- Works only for **2-player zero-sum games**
-- Input matrix must be numeric and 2D (e.g., 2x2, 3x4, etc.)
-- Payoff matrix should be from **Player A's** perspective
+- **Languages**: Python, R
+- **Libraries**:
+  - Python: pandas, matplotlib, seaborn, scikit-learn
+  - R: tidyverse, ggplot2, dplyr, readr
+- **Environments**: Jupyter, RStudio
 
 ---
 
-## 📚 References
+## 📚 Resources
 
-- Game Theory by John von Neumann and Oskar Morgenstern
-- [lpSolveAPI Documentation](https://cran.r-project.org/package=lpSolveAPI)
+- Kaggle Datasets
+- R & Python Data Science Handbook
+- EDA Cheat Sheets
 
 ---
 
 ## 🧊 License
 
-MIT License. Feel free to use and modify.
+MIT License – Free to use, modify, and share.
+
+---
+
+Happy Analyzing! 🎉
