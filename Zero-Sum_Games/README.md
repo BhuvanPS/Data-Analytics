@@ -76,13 +76,13 @@ payoff_matrix <- matrix(c(4, 2,
  Pure Strategy 
 
 === Player A Strategy ===
-[1] 0 1
+[1] 1 0
 
 === Player B Strategy ===
 [1] 0 1
 
 === Game Value ===
-[1] 1
+[1] 2
 ```
 
 ---
@@ -102,7 +102,7 @@ Implemented using the `lpSolveAPI` R package for building and solving LP problem
 
 ## 📁 Files
 
-- `game_theory_solver.R` – Main script
+- `ZeroSumGame.R` – Main script
 - `README.md` – Documentation file
 
 ---
